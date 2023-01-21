@@ -1,0 +1,12 @@
+.myapplications{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.myapplications-shortlisted,.myapplications-interviewing,.myapplications-rejected,.myapplications-offerReceived{
+    border: 2px solid grey;
+    min-width: 15rem;
+    padding: 0.1rem;
+}
+ 

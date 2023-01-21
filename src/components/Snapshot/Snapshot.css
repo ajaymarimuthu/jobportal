@@ -1,0 +1,12 @@
+.snapshot{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.snapshot-alljobs,.snapshot-eligibleJobs,.snapshot-appliedJobs{
+    border: 2px solid grey;
+    min-width: 15rem;
+    padding: 0.1rem;
+}
+ 
