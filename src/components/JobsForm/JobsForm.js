@@ -5,19 +5,19 @@ import Button from '@mui/material/Button';
 // import JobsListing from '../JobsListing/JobsListing';
 
 
-function JobsForm() {
+function JobsForm({handleinputChange}) {
   // const [industry, setfirst] = useState(second)
     return (
         <div>
             <h2>All Jobs</h2>
 
             <div>
-                <input type="text" placeholder='Title,Client,Location' className='input' />
+                <input type="text" placeholder='Title,Client,Location' className='input'  onChange={(e)=>handleinputChange(e)} />
                 <Button variant="contained">Search</Button>
 
             </div>
 
-            <div className='jobsform-options'>
+            {/* <div className='jobsform-options'>
               <select name="allJobs" className='jobsform-options-select'>
                 <option value="All Jobs">All Jobs</option>                
               </select>
@@ -48,7 +48,7 @@ function JobsForm() {
               <select name="allJobs" className='jobsform-options-select'> 
                 <option value="postedDate">Posted Date</option>                
               </select>
-            </div>
+            </div> */}
             
            {/* <JobsListing/> */}
 

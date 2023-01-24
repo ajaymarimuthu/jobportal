@@ -16,6 +16,8 @@ function DashBoard() {
 //   const data = useSelector(state=>state);
 
 const [response, setResponse] = useState([])
+
+const [search, setSearch] = useState("")
  
 
   const fetchJobsDetails = async () =>{
@@ -31,6 +33,11 @@ const [response, setResponse] = useState([])
 
   }
 
+  const handleinputChange =(e)=>{
+    setSearch(e.target.value)
+    // console.log(e.target.value);
+  }
+
   useEffect(() => {
 
       fetchJobsDetails();
@@ -40,10 +47,10 @@ const [response, setResponse] = useState([])
 
   return (
     <div className='dashboard'>
-       <Snapshot/>
+       <Snapshot response={response}/>
        <MyApplications/>
-      <JobsForm/>
-       <JobsListing response={response}/>  
+      <JobsForm handleinputChange={handleinputChange}/>
+       <JobsListing search={search} response={response} fetchJobsDetails={fetchJobsDetails}/>  
     </div>
   )
 }
